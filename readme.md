@@ -24,7 +24,7 @@ Your credentials will now appear under 'Database Accounts' in the following form
 **Note** that the SQL Server and database names are separated by a slash (SQL Server\Database Name). You may temporarily copy and paste the credentials separately on a notepad for easy management 
 ## 3. Re-enable disabled users via SQL Server Management Studio 
 * Open Microsoft SQL Server Management Studio
-	![login 1.PNG](login 1.PNG) 
+	![login1.PNG](login1.PNG) 
 * Log in using the credentials you just obtained and confirm the following:
 		Server type: Database Engine
 		Server name: This will be the server name (before the slash)
@@ -37,15 +37,15 @@ Your credentials will now appear under 'Database Accounts' in the following form
 * Expand the database. It should be called 'db_d365opsprod' followed by the corresponding environment (e.g. db_d365opsprod_**gwnysat** for SAT, **gwnyuat** for UAT)
 * Expand 'Tables'
 
-	![expand 1.PNG](expand 1.PN)  
+	![expand1.PNG](expand1.PNG)  
 
 * Find 'dbo.USERFINFO' table. Right click on it, and select "Select first 1000 rows"
 
-	![userInfo 4.PNG](userInfo 4.PNG)
+	![userInfo4.PNG](userInfo4.PNG)
 * You will notice the "ENABLE" column for users is set to '0'. To enable the users we need to set that to '1': 
 
-	![enable 1.PNG](enable 1.PNG) 
+	![enable1.PNG](enable1.PNG) 
 * Clear the query on the top window by clicking on it, and entering 'CTRL + A' then delete using your 'Backspace' or 'Del' button
 * Enter and run the following query: 'UPDATE USERINFO set ENABLE=1'. This will change all '0's to '1's, thus re-enabling all users
 
-	![run query.PNG](run query.PNG)
+	![runquery.PNG](runquery.PNG)
