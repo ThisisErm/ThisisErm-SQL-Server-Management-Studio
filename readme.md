@@ -19,7 +19,7 @@ Prerequisites: Access to [Lifecycle Services(LCS)](https://lcs.dynamics.com/v2),
 * Click 'Ok' and refresh the page for your temporary database credentials to appear
 Your credentials will now appear under 'Database Accounts' in the following format:
 
-	![credentials.PNG](credentials.PNG)
+	![credentials.PNG](credentials.png)
 
 **Note** that the SQL Server and database names are separated by a slash (SQL Server\Database Name). You may temporarily copy and paste the credentials separately on a notepad for easy management 
 ## 3. Re-enable disabled users via SQL Server Management Studio 
