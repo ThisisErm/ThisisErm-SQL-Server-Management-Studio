@@ -19,12 +19,12 @@ Prerequisites: Access to [Lifecycle Services(LCS)](https://lcs.dynamics.com/v2),
 * Click 'Ok' and refresh the page for your temporary database credentials to appear
 Your credentials will now appear under 'Database Accounts' in the following format:
 
-	![credentials.PNG](credentials.png)
+	![credentials.png](credentials.png)
 
 **Note** that the SQL Server and database names are separated by a slash (SQL Server\Database Name). You may temporarily copy and paste the credentials separately on a notepad for easy management 
 ## 3. Re-enable disabled users via SQL Server Management Studio 
 * Open Microsoft SQL Server Management Studio
-	![login1.PNG](login1.PNG) 
+	![login1.png](login1.png) 
 * Log in using the credentials you just obtained and confirm the following:
 		Server type: Database Engine
 		Server name: This will be the server name (before the slash)
@@ -37,15 +37,15 @@ Your credentials will now appear under 'Database Accounts' in the following form
 * Expand the database. It should be called 'db_d365opsprod' followed by the corresponding environment (e.g. db_d365opsprod_**gwnysat** for SAT, **gwnyuat** for UAT)
 * Expand 'Tables'
 
-	![expand1.PNG](expand1.PNG)  
+	![expand1.png](expand1.png)  
 
 * Find 'dbo.USERFINFO' table. Right click on it, and select "Select first 1000 rows"
 
-	![userInfo4.PNG](userInfo4.PNG)
+	![userInfo4.png](userInfo4.png)
 * You will notice the "ENABLE" column for users is set to '0'. To enable the users we need to set that to '1': 
 
-	![enable1.PNG](enable1.PNG) 
+	![enable1.png](enable1.png) 
 * Clear the query on the top window by clicking on it, and entering 'CTRL + A' then delete using your 'Backspace' or 'Del' button
 * Enter and run the following query: 'UPDATE USERINFO set ENABLE=1'. This will change all '0's to '1's, thus re-enabling all users
 
-	![runquery.PNG](runquery.PNG)
+	![runquery.png](runquery.png)
